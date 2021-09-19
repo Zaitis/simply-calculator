@@ -9,7 +9,7 @@ public class CalcFrame extends JFrame implements ActionListener {
 CalcPanel panel;
 
    static JTextField displayField;
-   JButton bClear, bDel;
+   private JButton bClear, bDel;
 
 
     CalcFrame(){
@@ -29,6 +29,7 @@ CalcPanel panel;
         bClear= new JButton("Clear");
         bClear.setBounds(10,100,150,50);
         bClear.addActionListener(this);
+
         bDel= new JButton("Delete");
         bDel.setBounds(160,100,150,50);
         bDel.addActionListener(this);
@@ -36,10 +37,8 @@ CalcPanel panel;
         this.add(displayField);
         this.add(bClear);
         this.add(bDel);
-
-
-
         this.add(panel);
+
         this.setResizable(false);
         this.setLocationRelativeTo(null);
         this.setVisible(true);

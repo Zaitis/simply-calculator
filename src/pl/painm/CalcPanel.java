@@ -6,13 +6,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CalcPanel extends JPanel implements ActionListener {
-    int PANEL_WIDTH=300;
-    int PANEL_HEIGHT=350;
-    JButton[] button =new JButton[10];
-    JButton dotButton,sumButton, addButton, minusButton, divButton, multiButton;
-    double temp = 0, temp2;
-    String tempChar;
-
+    private final int PANEL_WIDTH=300;
+    private final int PANEL_HEIGHT=350;
+    private JButton[] button =new JButton[10];
+    private JButton dotButton,sumButton, addButton, minusButton, divButton, multiButton;
+    private double temp = 0, temp2;
+    private String tempChar;
+    private Font font=new Font("MV Boli", Font.BOLD,25);
 
     CalcPanel(){
         this.setBounds(10,150,PANEL_WIDTH,PANEL_HEIGHT);
@@ -23,26 +23,26 @@ public class CalcPanel extends JPanel implements ActionListener {
         for (int i=0; i<=9;i++){
             button[i]=new JButton(String.valueOf(i));
             button[i].addActionListener(this);
-            button[i].setFont(new Font("MV Boli", Font.BOLD,25));
+            button[i].setFont(font);
         }
         addButton= new JButton("+");
         addButton.addActionListener(this);
-        addButton.setFont(new Font("MV Boli", Font.BOLD,25));
+        addButton.setFont(font);
         minusButton= new JButton("-");
         minusButton.addActionListener(this);
-        minusButton.setFont(new Font("MV Boli", Font.BOLD,25));
+        minusButton.setFont(font);
         multiButton= new JButton("*");
         multiButton.addActionListener(this);
-        multiButton.setFont(new Font("MV Boli", Font.BOLD,25));
+        multiButton.setFont(font);
         divButton= new JButton("/");
         divButton.addActionListener(this);
-        divButton.setFont(new Font("MV Boli", Font.BOLD,25));
+        divButton.setFont(font);
         dotButton= new JButton(".");
         dotButton.addActionListener(this);
-        dotButton.setFont(new Font("MV Boli", Font.BOLD,25));
+        dotButton.setFont(font);
         sumButton= new JButton("=");
         sumButton.addActionListener(this);
-        sumButton.setFont(new Font("MV Boli", Font.BOLD,25));
+        sumButton.setFont(font);
 
         this.add(button[1]);
         this.add(button[2]);
